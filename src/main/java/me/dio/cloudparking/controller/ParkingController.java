@@ -31,15 +31,15 @@ public class ParkingController {
         return ResponseEntity.ok(result);
     }
 
-    @GetMapping("/")
+    @RequestMapping("/")
     public String teste () {
         return "Quem eh o maior time do Rio?";
     }
-    @GetMapping("/Vasco")
+    @RequestMapping("/Vasco")
     public String vasco () {
         return "Nem a Pau. Chegou nem perto.";
     }
-    @GetMapping("/Flamengo")
+    @RequestMapping("/Flamengo")
     public String flamengo () {
         return "Acerto em cheio. Maior do rio é o Flamengo.";
     }
