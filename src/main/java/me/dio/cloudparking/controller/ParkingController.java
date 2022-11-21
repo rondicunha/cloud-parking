@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/parking")
 public class ParkingController {
 
 
@@ -30,19 +30,7 @@ public class ParkingController {
         List<ParkingDTO> result = parkingMapper.toParkingDTOList(parkingList);
         return ResponseEntity.ok(result);
     }
-
-    @RequestMapping("/")
-    public String teste () {
-        return "Quem eh o maior time do Rio?";
-    }
-    @RequestMapping("/Vasco")
-    public String vasco () {
-        return "Nem a Pau. Chegou nem perto.";
-    }
-    @RequestMapping("/Flamengo")
-    public String flamengo () {
-        return "Acerto em cheio. Maior do rio é o Flamengo.";
-    }
+    
 
     @GetMapping("/{id}")
     public ResponseEntity<ParkingDTO> findById (@PathVariable String id){
